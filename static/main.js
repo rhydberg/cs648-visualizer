@@ -52,7 +52,7 @@ function fix_dpi() {
 
 fix_dpi();
 console.log(canvas_width, canvas_height);
-const adj = 1.318
+const adj = 1
 canvas_width = canvas_width*adj;
 canvas_height = canvas_height*adj;
 
@@ -88,7 +88,7 @@ function draw(){
     ctx.beginPath();
     ctx.fillRect(points[index]*line_width + line_start_x, line_start_y, min_interval*line_width, line_height);
     info.style.display = "block";
-    info.innerHTML = "Smallest interval: " + min_interval.toFixed(5);
+    info.innerHTML = "Smallest interval: " + min_interval.toFixed(5)+"<br> N⁻² = "+(1/n**2).toFixed(5) +"<br> Δ = "+ (100*(min_interval - 1/n**2)/(1/n**2)).toFixed(5) + "%";
 
 
 }
